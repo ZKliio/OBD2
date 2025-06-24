@@ -373,7 +373,7 @@ import os
 folder_path = 'C:/Users/Zu Kai/ASTAR/output_csvs/'
 files = os.listdir(folder_path) #create a list of files in the folder
 param_dict = {}
-    
+
 for index, file in enumerate(files):
     print(f"{index}: {file}")
 
@@ -455,7 +455,7 @@ def receive_msg1():
             print("[%d]:ts:%d, id:%d, len:%d, eff:%d, rtr:%d, data:%s" %(
                             i, rcv_can_msgs[i].timestamp, rcv_can_msgs[i].frame.can_id, rcv_can_msgs[i].frame.can_dlc,
                             rcv_can_msgs[i].frame.eff, rcv_can_msgs[i].frame.rtr,                         
-                            ''.join(str(rcv_can_msgs[i].frame.data[j]) + ' ' for j in range(rcv_can_msgs[i].frame.can_dlc))))
+                            ''.join(f'{rcv_can_msgs[i].frame.data[j]:02x} ' for j in range(rcv_can_msgs[i].frame.can_dlc))))
 
         # print("[%d]:ts:%d, id:%d, len:%d, eff:%d, rtr:%d, data:%s" %(
         #                 1, rcv_can_msgs[1].timestamp, rcv_can_msgs[1].frame.can_id, rcv_can_msgs[1].frame.can_dlc,

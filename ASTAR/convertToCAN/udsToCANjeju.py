@@ -10,7 +10,7 @@ import csv
 
 model = 'KIA'
 car = 'Optima_PHEV'
-path = f'BMS_CSVs/{model}/{car}_BMS_data.csv'
+path = f'C:/Users/Zu Kai/astar_git/OBD2/ASTAR/BMS_CSVs/{model}/{car}_BMS_data.csv'
 
 with open(path, 'r', newline='') as csvfile:
     reader = csv.reader(csvfile)

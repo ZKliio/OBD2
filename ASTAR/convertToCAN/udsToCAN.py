@@ -32,6 +32,7 @@ uds_json = {
 
 #import file
 car = 'FordMustangMachE'
+folder_path = 'C:/Users/Zu Kai/ASTAR/output_csvs/'
 path = f'convertToCAN/UDSjson/{car}.json'
 uds_json_full = json.load(open(path, 'r'))
 # print(uds_json_full)
