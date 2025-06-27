@@ -2,41 +2,18 @@ import json
 import pandas as pd
 import os
 from pathlib import Path
-# Sample UDS JSON content (you can replace this with full JSON loading from file)
-uds_json = {
-    "current": {
-        "equation": "((signed(A)*256)+B)*0.1",
-        "minValue": "-500",
-        "maxValue": "300",
-        "type": "Number",
-        "command": "2248F9",
-        "ecu": "7E4"
-    },
-    "voltage": {
-        "equation": "((A<<8)+B)*0.01",
-        "minValue": "300",
-        "maxValue": "500",
-        "type": "Number",
-        "command": "22480D",
-        "ecu": "7E4"
-    },
-    "soc": {
-        "equation": "A*0.5",
-        "minValue": "-5",
-        "maxValue": "105",
-        "type": "Number",
-        "command": "224845",
-        "ecu": "7E4"
-    }
-}
 
 #import file
-car = 'FordMustangMachE'
-folder_path = 'C:/Users/Zu Kai/ASTAR/output_csvs/'
-path = f'convertToCAN/UDSjson/{car}.json'
-uds_json_full = json.load(open(path, 'r'))
-# print(uds_json_full)
 
+folder_path = f'C:/Users/Zu Kai/astar_git/OBD2/ASTAR/convertToCAN/UDSjson'
+files = os.listdir(folder_path) #create a list of files in the folder
+for index, file in enumerate(files):
+    print(f"{index}: {file}")
+
+filepath = files[int(input('Choose File by Index: \n'))]
+folder_path = f'C:/Users/Zu Kai/astar_git/OBD2/ASTAR/convertToCAN/UDSjson/{filepath}'
+with open(f'{folder_path}', 'r') as f:
+    uds_json_full = json.load(f)
 
 # Generate CAN frame data
 can_frames = []
@@ -63,7 +40,7 @@ df_can_frames = pd.DataFrame(can_frames)
 print(df_can_frames)
 
 # # Output CSV name
-base_filename = Path(path).stem
+base_filename = Path(folder_path).stem
 # print(base_filename)
 
 # Create output directory

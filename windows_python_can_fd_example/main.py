@@ -370,16 +370,23 @@ print("Start CAN1 OK!")
 import csv
 import os
 
-folder_path = 'C:/Users/Zu Kai/ASTAR/output_csvs/'
+folder_path = 'C:/Users/Zu Kai/astar_git/OBD2/ASTAR/convertToCAN/output_parameter_DID'
 files = os.listdir(folder_path) #create a list of files in the folder
 param_dict = {}
 
 for index, file in enumerate(files):
     print(f"{index}: {file}")
+manufacturer = files[int(input('Choose Manufacturer by Index: \n'))]
+folder_path = f'{folder_path}/{manufacturer}'
 
-filepath = files[int(input('Choose File by Index: \n'))]
+files = os.listdir(folder_path)
+for index, file in enumerate(files):
+    print(f"{index}: {file}")
+model = files[int(input('Choose Model by Index: \n'))]
 
-with open(f'C:/Users/Zu Kai/ASTAR/output_csvs/{filepath}', newline='') as csvfile:
+filepath = f'{folder_path}/{model}'
+
+with open(f'{filepath}', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         param_name = row['Parameter']  # Ensure this matches your CSV header
@@ -391,19 +398,21 @@ query_name = input('Choose which parameter you want to query:\n')
 payload = (param_dict[f'000_{query_name}'])
 databytes = payload.split()
 byte_list = [int(b, 16) for b in payload.strip().split()]
-byte_id = int(databytes[0], 16)
+did = 0x7E4
+
+
 #################################
 ### CAN frame send&&recv
 #################################
 #通道1发送数据
-transmit_can_num = 10
+transmit_can_num = 1
 can_msgs = (ZCAN_Transmit_Data * transmit_can_num)()
 for i in range(transmit_can_num):
     can_msgs[i].transmit_type = 0 #0=正常发送，1=单次发送，2=自发自收，3=单次自发自收。
     can_msgs[i].frame.eff     = 0 #extern frame
     can_msgs[i].frame.rtr     = 0 #remote frame
     # can_msgs[i].frame.brs     = 0 #BRS 
-    can_msgs[i].frame.can_id  = byte_id
+    can_msgs[i].frame.can_id  = did
     can_msgs[i].frame.can_dlc = 8
 
     can_msgs[i].frame.data = ( c_ubyte * 8 )(*byte_list)
@@ -416,11 +425,23 @@ for i in range(transmit_can_num):
 # ret = canDLL.ZCAN_Transmit(dev_ch1, can_msgs, transmit_can_num)
 # print("\r\nCAN0 Transmit CAN Num: %d." % ret)
 
+#### Flow control Message ####
+flow_bytelist = [0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+flow_msg = (ZCAN_Transmit_Data * 1)()
+flow_msg[0].transmit_type = 0 #0=正常发送，1=单次发送，2=自发自收，3=单次自发自收。
+flow_msg[0].frame.eff     = 0 #extern frame
+flow_msg[0].frame.rtr     = 0 #remote frame
+# can_msgs[i].frame.brs     = 0 #BRS 
+flow_msg[0].frame.can_id  = did
+flow_msg[0].frame.can_dlc = 8
+flow_msg[0].frame.data = ( c_ubyte * 8 )(*flow_bytelist)
 
 
 def send_msg1():
     ret = canDLL.ZCAN_Transmit(dev_ch1, can_msgs, transmit_can_num) # Sends message 1
     print("\r\nSend MSG CAN0 Transmit CAN Num: %d." % ret)
+    # for msg in can_msgs:
+    #      print(type(msg))
     # print("\r\n CAN0 Transmit CAN msg: %d." % can_msgs[0].frame.data[0])
     return ret
 
@@ -436,7 +457,7 @@ print("ret: %s" % ret)
 # rcv_can_msgs = (ZCAN_Receive_Data * 10)()
 # print(''.join(str(rcv_can_msgs[0].frame.data[j]) + ' ' for j in range(rcv_can_msgs[0].frame.can_dlc)))
 
-def receive_msg1():
+def receive_msg():
     ret = canDLL.ZCAN_GetReceiveNum(dev_ch2, TYPE_CAN)
 
     counter = 0
@@ -452,19 +473,54 @@ def receive_msg1():
         num = canDLL.ZCAN_Receive(dev_ch2, byref(rcv_can_msgs), ret, -1)
         print("CAN1 Received CAN NUM: %d." % num)
         for i in range(num):
-            print("[%d]:ts:%d, id:%d, len:%d, eff:%d, rtr:%d, data:%s" %(
+            print("[%d]:ts:%d, id:%X, len:%d, eff:%d, rtr:%d, data:%s" %(
                             i, rcv_can_msgs[i].timestamp, rcv_can_msgs[i].frame.can_id, rcv_can_msgs[i].frame.can_dlc,
                             rcv_can_msgs[i].frame.eff, rcv_can_msgs[i].frame.rtr,                         
                             ''.join(f'{rcv_can_msgs[i].frame.data[j]:02x} ' for j in range(rcv_can_msgs[i].frame.can_dlc))))
+        
 
         # print("[%d]:ts:%d, id:%d, len:%d, eff:%d, rtr:%d, data:%s" %(
         #                 1, rcv_can_msgs[1].timestamp, rcv_can_msgs[1].frame.can_id, rcv_can_msgs[1].frame.can_dlc,
         #                 rcv_can_msgs[1].frame.eff, rcv_can_msgs[1].frame.rtr,                         
         #                 ''.join(str(rcv_can_msgs[1].frame.data[j]) + ' ' for j in range(rcv_can_msgs[1].frame.can_dlc))))
 
+def receive_msg_flowcontrol():
+    ret = canDLL.ZCAN_GetReceiveNum(dev_ch2, TYPE_CAN)
+
+    counter = 0
+    while ret <= 0:#如果没有接收到数据，一直循环查询接收。
+            ret = canDLL.ZCAN_GetReceiveNum(dev_ch2, TYPE_CAN)
+            time.sleep(0.5)
+            counter += 1
+            print("counter: %s" % counter)
+            # if counter > 10:
+            #     break
+    if ret > 0:#接收到 ret 帧数据
+        rcv_can_msgs = (ZCAN_Receive_Data * ret)()
+        num = canDLL.ZCAN_Receive(dev_ch2, byref(rcv_can_msgs), ret, -1)
+        print("CAN1 Received CAN NUM: %d." % num)
+        for i in range(num):
+            print("[%d]:ts:%d, id:%X, len:%d, eff:%d, rtr:%d, data:%s" %(
+                            i, rcv_can_msgs[i].timestamp, rcv_can_msgs[i].frame.can_id, rcv_can_msgs[i].frame.can_dlc,
+                            rcv_can_msgs[i].frame.eff, rcv_can_msgs[i].frame.rtr,                         
+                            ''.join(f'{rcv_can_msgs[i].frame.data[j]:02x} ' for j in range(rcv_can_msgs[i].frame.can_dlc))))
+            
+        # After confirmation of receiving First Frame
+        # time.sleep(1)
+        fc = canDLL.ZCAN_Transmit(dev_ch1, flow_msg, 1) # Sends message 1
+        print("\r\nTransmitting Flow control Message...\n: %d." % fc)
+        time.sleep(0.5)
+        rcv_can_msgs = (ZCAN_Receive_Data * ret)()
+        num = canDLL.ZCAN_Receive(dev_ch2, byref(rcv_can_msgs), ret, -1)
+        print("CAN1 Received CAN NUM (Flow Control): %d." % num)
+        for i in range(num):
+            print("[%d]:ts:%d, id:%X, len:%d, eff:%d, rtr:%d, data:%s\n" %(
+                            i, rcv_can_msgs[i].timestamp, rcv_can_msgs[i].frame.can_id, rcv_can_msgs[i].frame.can_dlc,
+                            rcv_can_msgs[i].frame.eff, rcv_can_msgs[i].frame.rtr,                         
+                            ''.join(f'{rcv_can_msgs[i].frame.data[j]:02x} ' for j in range(rcv_can_msgs[i].frame.can_dlc))))
 
 time.sleep(1) # give time for transmission
-receive_msg1()
+receive_msg_flowcontrol()
 
 
 ### multithreading setup ###
