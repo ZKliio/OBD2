@@ -1,0 +1,6 @@
+Parameter,CAN_ID,UDS Request Payload,Vehicle Model,Source
+current,,03 22 1E 3D 00 00 00 00,MEB,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/MEB.json
+voltage,,03 22 1E 3B 00 00 00 00,MEB,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/MEB.json
+soc,,03 22 02 8C 00 00 00 00,MEB,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/MEB.json
+is_charging,,03 22 74 48 00 00 00 00,MEB,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/MEB.json
+is_dcfc,,03 22 74 48 00 00 00 00,MEB,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/MEB.json

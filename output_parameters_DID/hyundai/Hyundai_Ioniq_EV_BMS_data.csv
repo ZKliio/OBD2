@@ -1,0 +1,54 @@
+Parameter,CAN ID,DID,UDS Request Payload,Vehicle Model,Source
+Airbag H/wire Duty,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Auxillary Battery Voltage,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Available Charge Power,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Available Discharge Power,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Cell Voltage Deviation,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Current,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery DC Voltage,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Fan Feedback,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Fan Status,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Heater 1 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Heater 2 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Inlet Temperature,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Max Temperature,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Min Temperature,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 01 Temperature,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 02 Temperature,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 03 Temperature,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 04 Temperature,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 05 Temperature,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 06 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 07 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 08 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 09 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 10 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 11 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Module 12 Temperature,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Battery Power,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+BMS Ignition,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+BMS Main Relay,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Cumulative Charge Current,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Cumulative Discharge Current,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Cumulative Energy Charged,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Cumulative Energy Discharged,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Drive Motor Speed 1,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Drive Motor Speed 2,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+HV_Charging,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Inverter Capacitor Voltage,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Isolation Resistance,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Maximum Cell Voltage,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Maximum Cell Voltage No.,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Maximum Deterioration Cell No.,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Minimum Cell Voltage,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Minimum Cell Voltage No.,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Minimum Deterioration,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Minimum Deterioration Cell No.,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Normal Charge Port,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Operating Seconds,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Operating Time,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Rapid Charge Port,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+State of Charge BMS,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+State of Charge Display,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+State of Health,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}
+Odometer,7c6,0xb002,03 22 b0 02 00 00 00 00,Hyundai_Ioniq_EV_BMS,{None}

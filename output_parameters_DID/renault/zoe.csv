@@ -1,0 +1,7 @@
+Parameter,CAN_ID,UDS Request Payload,Vehicle Model,Source
+soc,dadaf1,03 22 20 02 00 00 00 00,zoe,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe.json
+vehicle_reported_speed,dadaf1,03 22 20 03 00 00 00 00,zoe,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe.json
+voltage,dadaf1,03 22 20 04 00 00 00 00,zoe,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe.json
+current,dadaf1,03 22 30 42 00 00 00 00,zoe,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe.json
+kwh_charged,dadbf1,03 22 91 C8 00 00 00 00,zoe,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe.json
+soh,dadbf1,03 22 90 03 00 00 00 00,zoe,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe.json

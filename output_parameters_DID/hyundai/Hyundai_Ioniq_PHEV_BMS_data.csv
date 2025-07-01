@@ -1,0 +1,52 @@
+Parameter,Short Name,CAN ID,DID,UDS Request Payload,Vehicle Model,Source
+000_Airbag H/wire Duty,Airbag,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Auxillary Battery Voltage,Aux Batt Volts,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Available Charge Power,Max REGEN,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Available Discharge Power,Max POWER,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Cell Voltage Deviation,V Diff,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Current,Batt Current,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery DC Voltage,Batt Volts,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Fan Feedback,Batt Fan SPD,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Fan Status,Batt Fan MOD,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Heater 1 Temperature,Heater Temp1,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Heater 2 Temperature,Heater Temp2,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Inlet Temperature,Batt InletT,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Max Temperature,Batt MaxT,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Min Temperature,Batt MinT,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 01 Temperature,Batt Temp01,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 02 Temperature,Batt Temp02,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 03 Temperature,Batt Temp03,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 04 Temperature,Batt Temp04,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 05 Temperature,Batt Temp05,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 06 Temperature,Batt Temp06,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 07 Temperature,Batt Temp07,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 08 Temperature,Batt Temp08,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 09 Temperature,Batt Temp09,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 10 Temperature,Batt Temp10,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 11 Temperature,Batt Temp11,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Module 12 Temperature,Batt Temp12,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Battery Power,Energy Draw,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_BMS Ignition,BMS Ignit.,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_BMS Main Relay,BMS Relay,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Cumulative Charge Current,CCC,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Cumulative Discharge Current,CDC,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Cumulative Energy Charged,CEC,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Cumulative Energy Discharged,CED,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Drive Motor Speed 1,Motor RPM 1,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Drive Motor Speed 2,Motor RPM 2,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_HV_Charging,Charging,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Inverter Capacitor Voltage,BMS Capacitor,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Isolation Resistance,Surge Resistor,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Maximum Cell Voltage,Max Cell V,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Maximum Cell Voltage No.,Max Cell V  No.,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Maximum Deterioration Cell No.,Max Det Cell No.,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Minimum Cell Voltage,Min Cell V,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Minimum Cell Voltage No.,Min Cell V  No.,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Minimum Deterioration,Min Det,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Minimum Deterioration Cell No.,Min Det Cell No.,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Normal Charge Port,J1772 Plug,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Operating Time,OpTime,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_Rapid Charge Port,CCS Plug,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_State of Charge BMS,SOC BMS,7E4,0x2101,03 22 21 01 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_State of Charge Display,SOC Display,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}
+000_State of Health,SOH,7E4,0x2105,03 22 21 05 00 00 00 00,Hyundai_Ioniq_PHEV_BMS,{'https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20PHEV%20-%208.9kWh'}

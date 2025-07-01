@@ -1,0 +1,11 @@
+Parameter,CAN_ID,UDS Request Payload,Vehicle Model,Source
+current,7e1,03 22 24 14 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+voltage,7e1,03 22 28 85 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+ext_temp,7e4,03 22 80 1F 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+batt_temp,7e4,03 22 43 4F 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+is_charging,7e4,03 22 45 31 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+is_dcfc,7e4,03 22 45 31 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+capacity,7e4,03 22 41 A3 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+soc,7e4,03 22 83 34 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+is_parked,7e1,03 22 28 89 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json
+speed,7e0,03 22 00 0D 00 00 00 00,bolt17,https://github.com/iternio/ev-obd-pids/blob/main/gmc/bolt17.json

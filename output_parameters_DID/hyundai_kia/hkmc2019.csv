@@ -1,0 +1,9 @@
+Parameter,CAN_ID,UDS Request Payload,Vehicle Model,Source
+current,7ec,03 22 01 01 00 00 00 00,hkmc2019,https://github.com/iternio/ev-obd-pids/blob/main/hkmc/hkmc2019.json
+voltage,7ec,03 22 01 01 00 00 00 00,hkmc2019,https://github.com/iternio/ev-obd-pids/blob/main/hkmc/hkmc2019.json
+kwh_charged,7ec,03 22 01 01 00 00 00 00,hkmc2019,https://github.com/iternio/ev-obd-pids/blob/main/hkmc/hkmc2019.json
+is_charging,7ec,03 22 01 01 00 00 00 00,hkmc2019,https://github.com/iternio/ev-obd-pids/blob/main/hkmc/hkmc2019.json
+batt_temp,7ec,03 22 01 01 00 00 00 00,hkmc2019,https://github.com/iternio/ev-obd-pids/blob/main/hkmc/hkmc2019.json
+soc,7ec,03 22 01 05 00 00 00 00,hkmc2019,https://github.com/iternio/ev-obd-pids/blob/main/hkmc/hkmc2019.json
+soh,7ec,03 22 01 05 00 00 00 00,hkmc2019,https://github.com/iternio/ev-obd-pids/blob/main/hkmc/hkmc2019.json
+ext_temp,7eb,03 22 01 00 00 00 00 00,hkmc2019,https://github.com/iternio/ev-obd-pids/blob/main/hkmc/hkmc2019.json

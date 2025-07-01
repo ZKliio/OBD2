@@ -63,13 +63,13 @@ def main(mock_input, sourcelink):
                 data += ' 00'
 
             records.append({
-                "Parameter": param_name,
-                "Short Name": short_name,
+                "Parameter": param_name[4:],
+                # "Short Name": short_name,
                 "CAN ID": ecu,
                 "DID": did_hex,
                 "UDS Request Payload": data,
-                "Vehicle": model[:-9],
-                "source": {sourcelink}
+                "Vehicle Model": model[:-9],
+                "Source": {sourcelink}
             })
 
     # Create DataFrame
@@ -78,7 +78,7 @@ def main(mock_input, sourcelink):
     print(df)
 
     # Output to CSV in a specific folder
-    output_folder = f"output_parameter_DID/{manufacturer}"
+    output_folder = f"C:/Users/Zu Kai/astar_git/OBD2/output_parameters_DID/{manufacturer}"
     os.makedirs(output_folder, exist_ok=True)
     output_file = os.path.join(output_folder, f"{model}")
     df.to_csv(output_file, index=False)

@@ -1,0 +1,12 @@
+Parameter,CAN_ID,UDS Request Payload,Vehicle Model,Source
+current,7e4,03 22 49 0C 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+voltage,7e4,03 22 49 0F 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+soh,7e4,03 22 49 18 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+soc,7e4,03 22 49 10 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+batt_temp,7e4,03 22 49 07 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+odometer,7e4,03 22 DD 01 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+vehicle_reported_speed,7e4,03 22 DD 09 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+is_charging,7e5,03 22 FE 0C 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+is_dcfc,7e5,03 22 FE 0C 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+ext_temp,733,03 22 99 24 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json
+is_parked,732,03 22 D9 28 00 00 00 00,ipace2019,https://github.com/iternio/ev-obd-pids/blob/main/jaguar/ipace2019.json

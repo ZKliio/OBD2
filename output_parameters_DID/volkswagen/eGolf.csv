@@ -1,0 +1,6 @@
+Parameter,CAN_ID,UDS Request Payload,Vehicle Model,Source
+current,7e5,03 22 1E 3D 00 00 00 00,eGolf,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/eGolf.json
+voltage,7e5,03 22 1E 3B 00 00 00 00,eGolf,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/eGolf.json
+soc,765,03 22 02 8C 00 00 00 00,eGolf,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/eGolf.json
+is_charging,,03 22 74 48 00 00 00 00,eGolf,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/eGolf.json
+is_dcfc,,03 22 74 48 00 00 00 00,eGolf,https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/eGolf.json

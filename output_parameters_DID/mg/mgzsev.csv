@@ -1,0 +1,11 @@
+Parameter,CAN_ID,UDS Request Payload,Vehicle Model,Source
+current,781,03 22 B0 43 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+voltage,781,03 22 B0 42 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+soh,781,03 22 B0 61 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+soc,781,03 22 B0 46 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+batt_temp,781,03 22 B0 56 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+is_charging,781,03 22 B0 48 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+is_dcfc,781,03 22 B0 48 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+odometer,760,03 22 B1 01 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+vehicle_reported_speed,7e3,03 22 BA 00 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
+ext_temp,7e3,03 22 BB 05 00 00 00 00,mgzsev,https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json
