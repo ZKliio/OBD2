@@ -402,19 +402,34 @@ keys_list = list(param_dict.keys()) # Get the keys (Parameters) in list
 for index, key in enumerate(keys_list):
     print(f"{index}: {key}")
 
+# Validation Loop
+def valid_loop():
+     i = True
+     while i:
+        query_index = int(input("Choose the index of the parameter you want to query:\n"))
+        
+        if query_index in range(0, len(keys_list)):
+            parameter = keys_list[query_index] # Get the key for the selected index
 
-query_index = int(input("Choose the index of the parameter you want to query:\n"))
-
-query_key = keys_list[query_index] # Get the key for the selected index
-payload = param_dict[query_key]["payload"]
-did = int(param_dict[query_key]["can_id"], 16)
-
-
+            try:
+                payload = param_dict[parameter]["payload"]
+            except Exception:
+                print(f"Missing payload for {manufacturer} {model}'s {parameter}")
+            try:
+                did = int(param_dict[parameter]["can_id"], 16)
+            except Exception:
+                print(f"Missing CAN ID for {manufacturer} {model}'s {parameter}") 
+            else:
+                i = False
+                return parameter, payload, did
+        else:
+            print("Invalid index. Please choose again.")
+            
+            
+parameter, payload, did = valid_loop()
 databytes = payload.split()
 byte_list = [int(b, 16) for b in payload.strip().split()]
 print(byte_list)
-
-# DID needs to change !!!!!!!
 
 
 #################################
@@ -456,7 +471,7 @@ flow_msg[0].frame.data = ( c_ubyte * 8 )(*flow_bytelist)
 def send_msg1():
     ret = canDLL.ZCAN_Transmit(dev_ch1, can_msgs, transmit_can_num) # Sends message 1
     print("\r\nSend MSG CAN0 Transmit CAN Num: %d." % ret)
-    print(f"\nSending payload request for {query_key}: {payload}")
+    print(f"\nSending payload request for {parameter}: {payload}")
     # for msg in can_msgs:
     #      print(type(msg))
     # print("\r\n CAN0 Transmit CAN msg: %d." % can_msgs[0].frame.data[0])
