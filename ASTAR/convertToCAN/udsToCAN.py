@@ -25,7 +25,7 @@ def main(mock_input, sourcelink):
     folder_path = r'C:/Users/Zu Kai/astar_git/OBD2/ev-obd-pids'
     files = os.listdir(folder_path) #create a list of files in the folder
 
-    excluded_files = ["obdble_cars.json", "README.md", "Mini"]
+    excluded_files = ["obdble_cars.json", "README.md",]
     
     # Filter the list
     files = [file for file in files if file not in excluded_files]

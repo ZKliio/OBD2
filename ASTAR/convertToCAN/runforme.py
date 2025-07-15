@@ -43,6 +43,7 @@ source_list_json = [
     "https://github.com/iternio/ev-obd-pids/blob/main/mg/mgzsev.json",
     "https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe.json",
     "https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe2.json",
+    "https://github.com/iternio/ev-obd-pids/blob/main/Mini/MiniCooperSE.json",
     "https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/eGolf.json",
     "https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/eUP.json",
     "https://github.com/iternio/ev-obd-pids/blob/main/volkswagen/MEB.json",
@@ -58,10 +59,11 @@ input_sets_json = [
     ["3", "1"],
     ["4", "0"],
     ["5", "0"],
-    ["5", "1"],
     ["6", "0"],
     ["6", "1"],
-    ["6", "2"],
+    ["7", "0"],
+    ["7", "1"],
+    ["7", "2"],
     
 ]
 

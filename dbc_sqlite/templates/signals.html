@@ -1,0 +1,37 @@
+<!-- templates/signals.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signals for {{ message.name }}</title>
+</head>
+<body>
+    <h1>Signals for Message: {{ message.name }}</h1>
+    <p><strong>Sender:</strong> {{ message.sender }}</p>
+    <p><strong>ID:</strong> {{ message.message_id }}</p>
+
+    {% if signals %}
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Start Bit</th>
+            <th>Length</th>
+            <th>Byte Order</th>
+            <th>Signed</th>
+            <th>Unit</th>
+        </tr>
+        {% for sig in signals %}
+        <tr>
+            <td>{{ sig.name }}</td>
+            <td>{{ sig.start_bit }}</td>
+            <td>{{ sig.length }}</td>
+            <td>{{ sig.byte_order }}</td>
+            <td>{{ 'Yes' if sig.is_signed else 'No' }}</td>
+            <td>{{ sig.unit }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No signals found.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- templates/select_model.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Car Model</title>
+</head>
+<body>
+    <h1>Select Car Model</h1>
+    <form method="get" action="/car/messages">
+        <select name="model_id" onchange="this.form.submit()">
+            <option value="">-- Choose a model --</option>
+            {% for model in car_models %}
+            <option value="{{ model.id }}" {% if model.id == selected_model %}selected{% endif %}>
+                {{ model.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </form>
+
+    {% if messages %}
+    <h2>Messages</h2>
+    <ul>
+        {% for msg in messages %}
+        <li><a href="/messages/{{ msg.id }}/signals">{{ msg.name }} (ID: {{ msg.id }})</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>

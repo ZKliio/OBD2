@@ -1,7 +1,7 @@
 Parameter,CAN_ID,UDS Request Payload,Vehicle Model,Source
-kwh_charged,dadbf1,03 22 91 C8 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe2.json
-soh,dadbf1,03 22 90 03 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe2.json
-soc,dadaf1,03 22 90 02 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe2.json
-vehicle_reported_speed,dadaf1,03 22 20 03 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe2.json
-voltage,dadaf1,03 22 20 FE 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe2.json
-current,dadaf1,03 22 21 CC 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/renault/zoe2.json
+kwh_charged,dadbf1,03 22 91 C8 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/Mini/MiniCooperSE.json
+soh,dadbf1,03 22 90 03 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/Mini/MiniCooperSE.json
+soc,dadaf1,03 22 90 02 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/Mini/MiniCooperSE.json
+vehicle_reported_speed,dadaf1,03 22 20 03 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/Mini/MiniCooperSE.json
+voltage,dadaf1,03 22 20 FE 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/Mini/MiniCooperSE.json
+current,dadaf1,03 22 21 CC 00 00 00 00,zoe2,https://github.com/iternio/ev-obd-pids/blob/main/Mini/MiniCooperSE.json
