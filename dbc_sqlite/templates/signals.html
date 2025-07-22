@@ -2,7 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signals for {{ message.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+
+
 </head>
 <body>
     <h1>Signals for Message: {{ message.name }}</h1>
@@ -10,14 +15,20 @@
     <p><strong>ID:</strong> {{ message.message_id }}</p>
 
     {% if signals %}
-    <table border="1">
+    <table border="1", id = "signalTable">
         <tr>
             <th>Name</th>
             <th>Start Bit</th>
             <th>Length</th>
             <th>Byte Order</th>
-            <th>Signed</th>
+            <th>Factor</th>
+            <th>Offset</th>
+            <th>Signed?</th>
+            <th>Min</th>
+            <th>Max</th>
             <th>Unit</th>
+            <th>Receiver</th>
+            
         </tr>
         {% for sig in signals %}
         <tr>
@@ -25,8 +36,14 @@
             <td>{{ sig.start_bit }}</td>
             <td>{{ sig.length }}</td>
             <td>{{ sig.byte_order }}</td>
+            <td>{{ sig.factor }}</td>
+            <td>{{ sig.offset }}</td>
             <td>{{ 'Yes' if sig.is_signed else 'No' }}</td>
+            <td>{{ sig.min }}</td>
+            <td>{{ sig.max }}</td>
             <td>{{ sig.unit }}</td>
+            <td>{{ sig.receiver }}</td>
+
         </tr>
         {% endfor %}
     </table>

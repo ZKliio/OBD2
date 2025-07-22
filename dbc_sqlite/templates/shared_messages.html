@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shared Messages</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Rank 1 Shared Messages</h1>
+        <h1>Select Car Model</h1>
+
+        <form method="get">
+            <label for="manufacturer">Filter by Manufacturer:</label>
+            <select name="manufacturer" id="manufacturer" onchange="this.form.submit()">
+                <option value="">-- All Manufacturers --</option>
+                {% for manu in manufacturers %}
+                    <option value="{{ manu.manufacturer }}" 
+                    {% if selected_manufacturer == manu.manufacturer %}selected{% endif %}>
+                        {{ manu.manufacturer }}
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Manufacturer</th>
+                    <th>Message ID</th>
+                    <th>Message Name</th>
+                    <th>Appears in Models</th>
+                    <th>Name Frequency</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in messages %}
+                <tr>
+                    <td>{{ row.manufacturer }}</td>
+                    <td>{{ row.message_id }}</td>
+                    <td>{{ row.message_name }}</td>
+                    <td>{{ row.model_count }}</td>
+                    <td>{{ row.frequency }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% if selected_manufacturer and manufacturer_messages %}
+        <h2>Messages for Manufacturer: {{ selected_manufacturer }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Message ID</th>
+                    <th>Message Name</th>
+                    <th>Model Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in manufacturer_messages %}
+                <tr>
+                    <td>{{ row.message_id }}</td>
+                    <td>{{ row.message_name }}</td>
+                    <td>{{ row.model_count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    </div>
+</body>
+</html>

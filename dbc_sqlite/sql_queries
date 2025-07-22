@@ -1,0 +1,102 @@
+
+
+
+
+-- ACROSS ALL CARS
+
+-- Lists messages by frequency desc
+-- This sql code shows table with frequency of messages (and its manufacturers) 
+-- to find patterns among dbc messages 
+WITH shared_messages AS (
+    SELECT 
+        manufacturer,
+        message_id,
+        COUNT(DISTINCT car_model) AS model_count
+    FROM messages
+    GROUP BY manufacturer, message_id
+    HAVING model_count > 1
+),
+
+ranked_shared AS (
+    SELECT *,
+           RANK() OVER (PARTITION BY manufacturer ORDER BY model_count DESC) AS rank
+    FROM shared_messages
+),
+
+message_names AS (
+    SELECT 
+        manufacturer,
+        message_id,
+        name,
+        COUNT(*) AS name_count
+    FROM messages
+    GROUP BY manufacturer, message_id, name
+),
+
+most_common_names AS (
+    SELECT manufacturer, message_id, name, name_count
+    FROM (
+        SELECT *,
+               ROW_NUMBER() OVER (PARTITION BY manufacturer, message_id ORDER BY name_count DESC) AS name_rank
+        FROM message_names
+    )
+    WHERE name_rank = 1
+)
+
+SELECT 
+    rs.manufacturer, 
+    rs.message_id, 
+    mcn.name AS message_name,
+    rs.model_count,              -- across how many models this message ID appears
+    mcn.name_count AS frequency  -- how many times this message name appears across messages
+FROM ranked_shared rs
+JOIN most_common_names mcn
+  ON rs.manufacturer = mcn.manufacturer AND rs.message_id = mcn.message_id
+WHERE rs.rank = 1
+ORDER BY frequency DESC;
+
+
+-- Lists messages by frequency desc within a car brand
+SELECT 
+    message_id,
+    name AS message_name,
+    COUNT(*) AS frequency
+FROM messages
+WHERE manufacturer = 'acura'     -- change to your manufacturer
+--   AND car_model = 'ilx_2016'    -- change to your car model
+GROUP BY message_id, name
+ORDER BY frequency DESC
+-- LIMIT 5;							-- limits to top 5 messages
+
+
+-- Lists messages by frequency desc within a car brand
+-- and which models they appear in
+WITH message_frequencies AS (
+    SELECT 
+        message_id,
+        name AS message_name,
+        COUNT(*) AS frequency
+    FROM messages
+    WHERE manufacturer = 'acura'   -- change manufacturer here
+    GROUP BY message_id, name
+),
+
+model_list AS (
+    SELECT 
+        message_id,
+        name,
+        GROUP_CONCAT(DISTINCT car_model) AS appears_in_models
+    FROM messages
+    WHERE manufacturer = 'acura'   -- same manufacturer
+    GROUP BY message_id, name
+)
+
+SELECT 
+    mf.message_id,
+    mf.message_name,
+    mf.frequency,
+    ml.appears_in_models
+FROM message_frequencies mf
+JOIN model_list ml
+  ON mf.message_id = ml.message_id AND mf.message_name = ml.name
+ORDER BY mf.frequency DESC;

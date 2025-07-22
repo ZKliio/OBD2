@@ -3,27 +3,75 @@
 <html>
 <head>
     <title>Select Car Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
 </head>
 <body>
-    <h1>Select Car Model</h1>
+    <div id = "select_model">
+        <!-- updates h2 to selected car model -->
+        <h1>Select Car Model</h1>
+        <!-- {% if selected_model %}
+        <h2>Selected Model: 
+            {% for model in car_models %}
+                {% if model.car_model_id == selected_model %}
+                    {{ model.manufacturer }} {{ model.model }}
+                {% endif %}
+            {% endfor %}
+        </h2> -->
+        <!-- {% endif %} -->
+
+    <!-- select model -->
     <form method="get" action="/car/messages">
         <select name="model_id" onchange="this.form.submit()">
+            
             <option value="">-- Choose a model --</option>
             {% for model in car_models %}
-            <option value="{{ model.id }}" {% if model.id == selected_model %}selected{% endif %}>
-                {{ model.name }}
+            <option value="{{ model.car_model_id }}" {% if model.id == selected_model %}selected{% endif %}>
+                <!-- {{ model.name }} -->
+                {{ model.manufacturer }}
+                {{ model.model }}
             </option>
+            <% if selected_model %>
             {% endfor %}
         </select>
+   
     </form>
+    
+    
+
+    
 
     {% if messages %}
-    <h2>Messages</h2>
-    <ul>
-        {% for msg in messages %}
-        <li><a href="/messages/{{ msg.id }}/signals">{{ msg.name }} (ID: {{ msg.id }})</a></li>
-        {% endfor %}
-    </ul>
+
+    <h2>Messages for: 
+        {% for model in car_models %}
+                {% if model.car_model_id == selected_model %}
+                    {{ model.manufacturer }} {{ model.model }}
+                {% endif %}
+            {% endfor %}
+    </h2>
+    <table id="messagesTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Length</th>
+                <th>Sender</th>
+                <!-- <th>Signals</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for msg in messages %}
+            <tr>
+                <td><a href="/messages/{{ msg.id }}/signals">{{ msg.name }}</a></td>
+                <td>{{ msg.message_id }}</td>
+                <td>{{ msg.dlc }}</td>
+                <td>{{ msg.sender }}</td>
+                <!-- <td>{{ msg.signal_count }}</td> -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     {% endif %}
+    </div>
 </body>
 </html>
