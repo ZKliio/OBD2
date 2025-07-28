@@ -1,6 +1,7 @@
 import sqlite3
 import re
 import os
+import csv
 
 conn = sqlite3.connect("can.db")
 cursor = conn.cursor()
@@ -98,8 +99,28 @@ def main(filename, manufacturer, model, variant):
 #     print(f"Inserting {file} ({car_model}, {variant})...")
 #     main(file, car_model, variant)
 
-# Iterate through folder
+def update_sender_descriptions(db_path, csv_path):
 
+    # Optional: Add the new column if it doesn't exist (SQLite doesn't support IF NOT EXISTS for ALTER)
+    # You can run this once outside or handle errors gracefully here
+    
+    with open(csv_path, newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            sender_name = row['Sender'].strip()
+            description = row['Description'].strip()
+
+            # Update the messages table where sender matches sender_name
+            cursor.execute("""
+                UPDATE messages
+                SET sender_description = ?
+                WHERE sender = ?
+            """, (description, sender_name))
+    
+
+
+
+# Iterate through folder
 def iterate_folder():
     folder_path = r'C:/Users/Zu Kai/astar_git/OBD2/dbc'
 
@@ -111,7 +132,7 @@ def iterate_folder():
             print(f'Filename: {file}')
             # car_model = "_".join(file.split("_")[:3])
             split = file.split("_")
-            manufacturer = split[0]
+            manufacturer = split[0].lower()
             if len(split) == 2:
                 model = split[1].replace(".dbc", "") 
             else:
@@ -131,6 +152,7 @@ def iterate_folder():
 
 iterate_folder()
 
+update_sender_descriptions('can.db', 'unique_senders_dbc_with_descriptions.csv')
 
 conn.commit()
 conn.close()

@@ -47,7 +47,7 @@ def view_signals(request: Request, message_id: int):
     })
 
 @app.get("/search", response_class=HTMLResponse)
-def shared_messages(request: Request, manufacturer: str = Query(None)):
+def shared1_messages(request: Request, manufacturer: str = Query(None)):
     # For dropdown filter
     manufacturers = query_db("SELECT DISTINCT manufacturer FROM messages ORDER BY manufacturer")
 
@@ -130,4 +130,50 @@ def shared_messages(request: Request, manufacturer: str = Query(None)):
         "manufacturers": manufacturers,
         "selected_manufacturer": manufacturer,
         "manufacturer_messages": manufacturer_messages
+    })
+
+@app.get("/shared_messages", response_class=HTMLResponse)
+def shared_messages(request: Request, manufacturer: str = Query(default=None)):
+    params = ()
+    filter_clause = ""
+    if manufacturer:
+        filter_clause = " WHERE rs.manufacturer = ?"
+        params = (manufacturer,)
+
+    # Main query for message summary
+    sql = f"""
+    SELECT 
+        rs.manufacturer, 
+        rs.message_id, 
+        mcn.name AS message_name,
+        rs.model_count,              
+        mcn.name_count AS frequency,
+        GROUP_CONCAT(DISTINCT ms.car_model) AS car_models
+    FROM (
+        SELECT manufacturer, message_id, COUNT(DISTINCT car_model) AS model_count
+        FROM messages
+        GROUP BY manufacturer, message_id
+        HAVING model_count >= 1 
+    ) rs
+    JOIN (
+        SELECT manufacturer, message_id, name, COUNT(*) AS name_count
+        FROM messages
+        GROUP BY manufacturer, message_id, name
+    ) mcn
+    ON rs.manufacturer = mcn.manufacturer AND rs.message_id = mcn.message_id
+    JOIN messages ms ON ms.manufacturer = rs.manufacturer AND ms.message_id = rs.message_id
+    {filter_clause}
+    GROUP BY rs.manufacturer, rs.message_id, mcn.name, rs.model_count, mcn.name_count
+    ORDER BY frequency DESC
+    
+    """
+
+    messages = query_db(sql, params)
+    manufacturers = query_db("SELECT DISTINCT manufacturer FROM messages")
+
+    return templates.TemplateResponse("shared_messages.html", {
+        "request": request,
+        "messages": messages,
+        "manufacturers": manufacturers,
+        "selected_manufacturer": manufacturer
     })

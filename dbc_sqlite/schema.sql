@@ -31,11 +31,12 @@ CREATE TABLE messages (
     message_id INTEGER,  -- actual CAN ID
     name TEXT,
     dlc INTEGER,
-    sender TEXT,
     car_model_id INTEGER,
     dbc_id INTEGER,
     manufacturer TEXT,
     car_model TEXT,
+    sender TEXT,
+    sender_description TEXT,
     FOREIGN KEY (car_model_id) REFERENCES car_models(id),
     FOREIGN KEY (dbc_id) REFERENCES dbc_files(id)
 );

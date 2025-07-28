@@ -67,7 +67,8 @@ SELECT
     message_id,
     car_model
 FROM messages
-WHERE message_id IN (
+WHERE manufacturer = "honda"
+AND message_id IN (
     SELECT message_id
     FROM messages
     GROUP BY manufacturer, message_id

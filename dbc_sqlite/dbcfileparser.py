@@ -11,6 +11,5 @@ for file in (dbc_files):
     print(split)
     manufacturer = split[0]
     if len(split) >= 4:
-        
-    # modell = split[1] + "_" + split[2]
-    # dict[manufacturer] = dict.get(manufacturer, []) + [file]
+        model = split[1] + "_" + split[2]
+        dict[manufacturer] = dict.get(manufacturer, []) + [file]

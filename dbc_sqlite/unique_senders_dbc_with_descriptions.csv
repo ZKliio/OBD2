@@ -1,0 +1,230 @@
+Sender,Description
+AAF,Active Air Flap – controls grille shutters to optimize engine cooling and aerodynamics (Hyundai).
+ABS,Anti-lock Braking System – handles wheel lock prevention during braking (Hyundai).
+ABS_ESC,ABS/ESC control module – handles electronic stability and traction control systems (Ford/Lincoln).
+ACC_Sensor,Adaptive Cruise Control sensor – detects vehicles ahead and feeds data to ACC system (BMW).
+ACI,Audio Control Interface – handles radio/audio control acknowledgments (BMW).
+ACM,Active Chassis Management – sends AEB (automatic emergency braking) requests (Rivian).
+ACSM,Advanced Crash Safety Module – includes crash detection and security counters (BMW).
+ACU,Airbag Control Unit – manages airbag deployment logic (Hyundai).
+ADAS,Advanced Driver Assistance System – feeds HUD info from ACC (Acura).
+ADAS_PRK,ADAS Parking – part of assisted parking system (Hyundai/Kia).
+ADRV,Autonomous Driving Radar Vehicle – radar control or object detection (Hyundai CAN FD).
+AFLS,Adaptive Front Lighting System – adjusts headlight beams dynamically (Hyundai).
+AFS,Adaptive Front-lighting System – adjusts beam angle and intensity (Toyota).
+AHLS,Adaptive Headlamp Leveling System – auto-adjusts headlamp level based on pitch (Hyundai).
+AHM,Trailer Module – status and lighting for trailers (BMW).
+AMM_FO,ADAS Metadata Message – likely for ADAS data broadcasting (Cadillac CT6).
+AMP,Amplifier Module – handles infotainment audio signals (Hyundai).
+APRK,Advanced Park Assist – sends smart parking assist commands (Hyundai CAN FD).
+ARS,Anti-Rollover Sensor or Alive Counter – likely safety system heartbeat signal (BMW).
+ASCM,Active Safety Control Module – sensor fusion for safety features (BMW).
+ASD,Active Sound Design – generates artificial engine sound in cabin (Hyundai).
+AVM,Around View Monitor – provides 360° camera view data (Hyundai).
+AWD,All-Wheel Drive data – controls and monitors AWD system (Hyundai Santa Fe).
+Airbag_MQB,Airbag system message – likely deployment or readiness status (VW MQB).
+AntilockBrakeSystem,Wheel speed signal used for ABS functionality (Mazda RX-8).
+B233B_LRR,Long Range Radar – object tracking data (GM Global A).
+BCM,"Body Control Module – central control for windows, locks, lights (Volvo)."
+BCW,Blind-Spot Collision Warning – radar input for blind spot detection (Hyundai/Kia).
+BDY,Body module – sends door and lock status info (Acura ILX).
+BGM,Backup Camera State – status from reverse camera system (Toyota).
+BMC_MLBevo,Battery Management Controller – battery state/status in MLB evo platform (VW).
+BMS_MQB,Battery Management System – hybrid battery status in MQB platform (VW).
+BSR,Blind Spot Radar – sends detected object info (Toyota).
+CAM,"Camera module – lane marking detection, e.g., for LKAS (Acura RDX)."
+CAMERA,Front or surround camera – sends image or object data (Hyundai CAN FD).
+CAS,Car Access System – handles locking/unlocking and start authorization (BMW).
+CCC,Central Control Computer – handles instrument cluster requests (BMW).
+CCP,Communication Control Protocol – gateway or network management module (Hyundai).
+CEM,Central Electronics Module – controls switches and vehicle electronics (Volvo).
+CGM,Chassis Gateway Module – acts as gateway for primary actuator messages (Rivian).
+CGW,Central Gateway – facilitates communication between ECUs (Toyota).
+CH,ESP Wheel Speeds – sends individual wheel speeds for traction control (Tesla).
+CID,Control Interface Display – monitors status from rear display or controls (BMW).
+CLOCK,Clock module – likely syncs time or coordinates timing across ECUs (Hyundai).
+CLU,Cluster Unit – provides driver instrument cluster info (Hyundai).
+CMR_DSMC,CMR DSMC Network Management – network communication management (Ford).
+CSR,Customer Service Request – likely user-initiated controls or diagnostics (Toyota).
+CTM,Convertible Top Module – position control for rear window/top (BMW).
+CUBIS,Central Unit for Body Integration System – manages lighting and doors (Hyundai).
+CVM,Camera Vision Module – provides visual processing for ADAS (Volvo).
+DATC,Dual Automatic Temperature Control – climate control unit (Hyundai).
+DCDC_800V_PAG,DC-DC Converter – 800V to 12V conversion unit (VW MEB platform).
+DDE1,"Digital Diesel Electronics 1 – BMW diesel engine control module managing diesel exhaust gas additive dosing (e.g., DEF/urea) in E9x/E8x models."
+DI,Drive Inverter (Tesla) state management module on CAN network.
+DIM,Instrument cluster display module in Volvo V40 2017.
+DI_BOX,Data Interface Box module in Hyundai 2015 CCAN platform.
+DKG,Transmission Control Module – Status of DKG (BMW dual-clutch gearbox) in E9x/E8x.
+DME,Digital Motor Electronics – Engine management module handling accelerator pedal input in BMW E9x/E8x.
+DMS_FO,Driver Monitoring System Eye Area of Interest info (Cadillac CT6).
+DS1,Adaptive Cruise Control Sensor (Toyota 2017).
+DSC,"Dynamic Stability Control module, handling acceleration and stability data (BMW E9x/E8x)."
+DSU,Drive Support Unit / ACC Control in Toyota New MC platform.
+DWA,Alarm and horn control module in BMW E9x/E8x.
+Dummy_FO,Diagnostic test tool request for LFSRR (Cadillac CT6).
+ECM,Engine Control Module for ACC in Volvo V40 2017.
+ECM1,Additional Engine Control Module in Volvo V40 2017.
+ECM_Diesel,Diesel Engine Control Module with Urea Strategy (Ford Lincoln Base).
+ECS,Electronic Climate System module in Hyundai 2015 CCAN.
+ECU,General Electronic Control Unit Data 1 for Hyundai Santa Fe 2007.
+EDCK,Damper current status (BMW E9x/E8x).
+EDT,Electronic Diesel Timing module in Hyundai 2015 MCAN.
+EGS,"Gearbox control module, gear status reporting in BMW E9x/E8x."
+EHC,Air suspension height level control in BMW E9x/E8x.
+EKP,Electric fuel pump status in BMW E9x/E8x.
+EMF,Electronic Module Front status on KCAN (BMW E9x/E8x).
+EMS,Engine Management System battery data (Hyundai 2015 CCAN).
+ENGINE,Engine control module in FCA Giorgio platform.
+EOCM2A_IMX6_FO,USDT (Unified Sensor Data Transport) Response from EOCM2A IMX6 (Cadillac CT6).
+EOCM2A_K1_FO,Inertial trigger signal from EOCM2A K1 module (Cadillac CT6).
+EOCM2B_IMX6_FO,USDT Response from EOCM2B IMX6 (Cadillac CT6).
+EOCM2B_K1_FO,USDT Response from EOCM2B K1 (Cadillac CT6).
+EOCM2B_K2_FO,USDT Response from EOCM2B K2 (Cadillac CT6).
+EOCM_F_FO,Body Info FOB (Key Fob) module (Cadillac CT6).
+EON,ACC (Adaptive Cruise Control) control in Acura RDX 2020.
+EPAS,Electric Power Assisted Steering system status in Tesla CAN network.
+EPAS_P,Diagnostic Physical Response from EPAS Primary Actuator (Rivian).
+EPB,Electronic Parking Brake module in Hyundai 2015 CCAN.
+EPS,Electric Power Steering module in FCA Giorgio platform.
+ESC,Electronic Stability Control via SAS11 module in Hyundai 2015 CCAN.
+ESP,Diagnostic Physical Response from ESP Primary Actuator (Rivian).
+ETH,Drive Inverter state module on Tesla Model 3 Party CAN network.
+EVP,Electric Vehicle Power module in Hyundai 2015 CCAN.
+ElectricPowerSteering,Steering control module in Mazda RX8.
+FCA,"Forward Collision Avoidance system. This module often handles messages related to front radar sensors, adaptive cruise control, and collision warnings."
+FCM,"Forward Collision Management. Used in driver assistance systems like Automatic High Beam, Lane Keep Assist, Road Sign Assist (RSA), and collision detection."
+FHCU,NM module for Fuel Cell Hydrogen Control Unit in Hyundai’s 2015 MCAN platform.
+FKA,Status_Klima_Fond – rear climate control status reporting in BMW E9x/E8x.
+FLA,Control_high_beam_assistant – manages automatic high-beam assist in BMW vehicles.
+FPCM,Fuel Pump Control Module – regulates fuel system pressure in Hyundai 2015 CCAN models.
+FRD,"FRD1N01 – Front Radar Detection module in Toyota 2017 platforms, likely related to ADAS."
+FRMFA,Control_window_lifter_FAT – controls front window lifters and anti-trap in BMW E9x/E8x.
+FRONT_RADAR,"RADAR_0x201 – Hyundai front radar unit using CAN FD, involved in object detection and AEB."
+FSM,"FSM0 – Front Seat Module in Volvo V40 2017, controls powered seat adjustments and memory."
+FZD,Electrochromic_control – BMW interior mirror dimming and dome lighting control (E9x/E8x).
+FrontCamera,Front Camera 
+Frontsensorik,Front Sensor
+GMLAN,"General Motors Local Area Network module, reports Blinker Status in GM Global A platform."
+GTW,"Gateway module handling BODY_R1 messages on Tesla CAN network, managing vehicle body systems."
+GWM,"Gateway module (Ford): Central ECU that routes messages between CAN networks (e.g., powertrain, chassis, body); handles diagnostics, wake-up signals, and cross-domain control logic. "
+GWS,"Gear Selector Switch module in BMW vehicles; manages gear selection input, sends gear position to the transmission ECU, and interfaces with features like Sport/Comfort mode selection. Seen in platforms like E9x and E8x."
+Gateway,"(Volkswagen) Central ECU that routes messages between CAN buses; handles diagnostics, wake-up signals, and cross-domain control logic. Used widely in VW Group vehicles. Variants include Gateway_MQB and Gateway_D4C7"
+Gateway_D4C7,"Variations of Gateway: routes messages between CAN buses; handles diagnostics, wake-up signals, and cross-domain control logic. Used widely in VW Group vehicles"
+Gateway_MQB,"Variations of Gateway: routes messages between CAN buses; handles diagnostics, wake-up signals, and cross-domain control logic. Used widely in VW Group vehicles"
+Getriebe_DQ_Hybrid_MQB,"Transmission Control Unit for VW’s DQ-series dual-clutch hybrid gearboxes in MQB platforms; manages gear shifting, hybrid torque coordination, and drivetrain status."
+HKL,"Heckklappe (German for “tailgate”) control module; controls power tailgate opening, closing, and anti-pinch safety logic. Used in BMW platforms."
+HUD,"Head-Up Display module; projects driving information onto the windshield and manages display content, brightness, and diagnostics. Present in both BMW and Hyundai vehicles."
+H_U,"Head Unit module in Hyundai vehicles; manages infotainment, audio, navigation, and interface with telematics or external devices. Communicates with TMU and display units."
+IAP,"Integrated Accessory Power module; controls and monitors power delivery to vehicle accessories such as USB, wireless chargers, or infotainment systems. Common in Hyundai/Kia platforms."
+IBM,"Integrated Brake Module in Rivian vehicles; responsible for brake actuation, regenerative braking coordination, and ESC logic. Integrates braking electronics, hydraulics, and diagnostics."
+IBOX,"Telematics Interface Box in Hyundai/Kia vehicles; bridges communication between head unit and TMU, and handles emergency call (eCall), remote diagnostics, and modem functions."
+ICM,"Integrated Control Module in Hyundai/Kia; coordinates signals from multiple subsystems like steering, ADAS, and ESP. Functions as a sensor and command aggregator."
+IHKA,"Integrated Heating and Air Conditioning control module in BMW vehicles; manages climate zones, fan speed, defrost, and air distribution. Interfaces with interior sensors and HVAC actuators."
+INTERCEPTOR,"Gas sensor data module for Acura ILX 2016, monitors fuel/air mixture or emissions."
+IPAS,"Intelligent Parking Assist System module, reports AUTOPARK status on Toyota New MC platform."
+IPM,"Integrated Power Module in Hyundai vehicles; manages and distributes electrical power to various subsystems, often incorporating fuse monitoring, relays, and diagnostics."
+IPMA_ADAS,"Intelligent Power Management/ADAS module in Ford vehicles; handles ADAS-related sensor fusion and coordination, often sending data to the Gateway (GWM) for further vehicle-wide distribution."
+InstrumentCluster,"Instrument Cluster module in Mazda vehicles; displays vehicle speed, RPM, fuel level, warnings, and other vital information. Interfaces with multiple ECUs for real-time data display."
+JBBF,"Junction Box Electronics Front (German: ""Junction Box Bordnetz-Front"") in BMW vehicles; responsible for distributing electrical power, controlling fuses/relays, and monitoring terminal 30 (constant battery power)."
+K124_ASCM,Airbag Sensor and Control Module in Cadillac CT6 powertrain; monitors crash sensors and manages airbag deployment and occupant safety systems.
+K16_BECM,"Body Electrical Control Module in GM global architecture; controls body-related electrical systems including lighting, windows, and climate control."
+K17_EBCM,"Electronic Brake Control Module in Cadillac CT6 chassis; manages ABS, traction control, regenerative braking, and brake system diagnostics."
+K1_APM,"Active Power Management module in GM global architecture; controls power distribution, battery management, and electrical load balancing."
+K20_ECM,"Engine Control Module in Cadillac CT6 powertrain; manages engine fuel injection, ignition, emission controls, and accelerator input processing."
+K43_PSCM,"Power Steering Control Module in GM Global A architecture; manages electric power steering assistance, steering torque feedback, and diagnostics."
+K73_TCIC,"Telematics Communication Interface Control module in Cadillac CT6; handles OnStar services, GPS data, and vehicle connectivity."
+K9_BCM,"Body Control Module in Cadillac CT6; controls vehicle body functions such as doors, lights, alarms, and interior electronics."
+KBD,"Keyboard or key-related input module in Hyundai vehicles; often part of central body domain managing user inputs, possibly related to diagnostics or remote access."
+KMA_TMU,"Telematics Module Unit for Hyundai/Kia (KMA = Kia Motors America); handles remote connectivity, diagnostics, and emergency services (e.g., eCall)."
+KSS,"Occupant Safety System module in Toyota; manages seatbelt status, airbag deployment readiness, and crash sensor data."
+Kombi,"Kombiinstrument (Instrument Cluster) in BMW; displays vehicle speed, warnings, and other cluster-based outputs. Interfaces with various subsystems including lighting, navigation, and safety systems."
+LCA,Lane Change Assist module in Hyundai; monitors adjacent lanes and alerts the driver to potential hazards during lane changes.
+LDM,"Longitudinal Dynamics Management module in BMW; coordinates torque requests from powertrain and stability systems, especially in relation to traction and engine braking."
+LDWS_LKAS,"Lane Departure Warning / Lane Keeping Assist System module in Hyundai; detects lane markings and provides visual, haptic, or steering input to assist the driver in staying within the lane."
+LEH_MQB,High-voltage Battery Management module (Leistungselektronik Hybrid) in VW MQB hybrid vehicles; manages DC/DC conversion and hybrid drive energy flow.
+LFSRR_FO,Left Front Short-Range Radar in Cadillac CT6; detects nearby objects for parking assistance and blind spot detection.
+LPI,"Low Pressure Injection module in Hyundai/Kia; handles injection timing, pressure regulation, and fuel system monitoring for low-pressure fuel systems."
+LRR_FO,"Long-Range Radar in Cadillac CT6; supports adaptive cruise control, forward collision warning, and object tracking in front of the vehicle."
+LRSRR_FO,"Left Rear Short-Range Radar in Cadillac CT6; detects nearby objects to assist in blind spot monitoring, rear cross-traffic alert, and parking maneuvers."
+LVR,Lever module in Hyundai; typically responsible for stalk or switch input like turn signals or wipers on the steering column.
+MAV,Millimeter-wave Antenna Vehicle module in Toyota; used in radar-based ADAS for forward object detection and cruise control support.
+MCU,"Motor Control Unit in Tesla vehicles; manages inverter logic and high-voltage control of electric motors, also provides feedback on location or state."
+MDPS,Motor Driven Power Steering module in Hyundai; provides steering assistance based on torque input and driving conditions.
+MON,Monitor module in Hyundai; typically involved in diagnostics or powertrain monitoring functions across CAN networks.
+MRR,"Mid-Range Radar in Ford; used for ADAS features such as lane-keeping, blind spot monitoring, and adaptive cruise."
+MRSZ,Driver Detection Module in BMW; detects driver presence via seat sensors or capacitive steering wheel to support safety and convenience features.
+Motor_Diesel_MQB,"Diesel engine control module for VW MQB; handles combustion, turbo control, emissions, and diagnostics for diesel-powered variants."
+Motor_Hybrid_MQB,"Hybrid powertrain control module in VW MQB; integrates engine, electric motor, and regenerative systems for hybrid operation."
+Motor_MQB_BEV,"Battery Electric Vehicle motor controller in VW MQB; manages electric drive unit, regen braking, and battery communication."
+NEO,Advanced Safety Controller in GM Global A architecture; may provide coordination of adaptive cruise or safety features through speed and actuator control.
+NVC,Night Vision Camera module in BMW; captures thermal or IR imagery to assist with driver awareness in low-visibility conditions.
+NVS_FO,"Night Vision System in Cadillac CT6; supports detection of pedestrians or animals using thermal imaging, often integrated with ADAS alerts."
+OCS,"Occupant Classification System in Rivian; detects passenger presence, weight, and classification to inform airbag deployment decisions."
+ODS,"Occupant Detection System in Hyundai; part of the airbag system, determines seat occupancy status for safety feature activation."
+OPI,"Overhead Panel Interface in Hyundai; manages user inputs from the roof console such as interior lights, sunroof controls, or emergency buttons."
+PARTY,"Tesla-specific domain, typically used in development/internal naming; used in Model 3 for testing or subsystem control (e.g., APS_eacMonitor)."
+PCM,"Powertrain Control Module in Acura; central engine and transmission controller that handles acceleration, fuel, and emissions logic."
+PCM_HEV,Hybrid-specific Powertrain Control Module in Ford; manages both combustion and electric systems in hybrid configurations.
+PDC,Park Distance Control module in BMW; manages ultrasonic sensors and generates acoustic alerts for obstacles during parking.
+PGS,Parking Guidance System in Hyundai; coordinates inputs from sensors and cameras to assist with automated or guided parking.
+PSB,Power Seat Box in Hyundai; controls motorized seat adjustments and memory settings.
+PSCM,Power Steering Control Module in Ford; provides electronic steering assistance and communicates with ADAS modules.
+PowertrainControlModule,"Central engine and transmission controller in Mazda RX-8; manages power delivery, engine behavior, and driveability parameters."
+RAD1,"Radio control unit in BMW; manages audio, tuner functions, and infotainment system interaction."
+RADAR,Adaptive Cruise and Collision Radar module in FCA (Giorgio); handles long-range object detection for forward safety systems.
+RCM,Restraint Control Module in Rivian; governs airbag and seatbelt pretensioner deployment based on crash data.
+RDC,Tire Pressure Monitoring System (TPMS) module in BMW; receives pressure data from wheel sensors and alerts for anomalies.
+REA,Rear Electric Actuator module in Hyundai; controls rear steering or alignment components when available.
+RFK,Rear View Camera module in BMW; streams video feed to infotainment or parking systems.
+RFSRR_FO,Right Front Short-Range Radar in Cadillac CT6; used for ADAS features like blind spot detection and park assist.
+RRC,Rear Right Corner module in Hyundai; may manage or aggregate signals from sensors or lights at the rear-right side.
+RRSRR_FO,Right Rear Short-Range Radar in Cadillac CT6; detects objects for rear cross-traffic alert and blind spot functions.
+RSE,Rear Seat Entertainment control module in BMW; manages infotainment features for rear passengers.
+RSE_L,Rear Seat Entertainment (Left) in Hyundai; specific side module for managing media or display control in left rear seat.
+RSE_R,Rear Seat Entertainment (Right) in Hyundai; manages media systems for right rear seat passengers.
+RSPA,Remote Smart Parking Assist module in Hyundai/Kia; handles driverless parking entry/exit using key fob or smartphone.
+RSRR_FO,Rear Short-Range Radar in Cadillac CT6; detects objects close to the rear bumper for safety and parking.
+Radar,"Tesla radar module; used for object detection in adaptive cruise, autopilot, and collision avoidance systems."
+SAK_MQB,"Steering Column Control Module (Steuergerät für Airbag-Kommunikation) in VW MQB; handles steering wheel button input, airbag comms, and stalk logic."
+SAS,Steering Angle Sensor in Volvo; provides precise steering angle and rotational rate data to stability and steering systems.
+SCC,Smart Cruise Control module in Hyundai; uses radar and camera data to maintain safe following distance and adjust speed automatically.
+SCCM,"Steering Column Control Module in Rivian; integrates stalk input, wheel touch detection, and other controls mounted on the steering column."
+SCM,"Steering Column Module in Toyota; reads inputs from stalk switches (e.g., turn signals, wipers) and sends them to body/control ECUs."
+SCS,Safety Control Sensor in Toyota; part of the SRS system that contributes to crash detection and occupant safety logic.
+SM_BF,Seat Module - Passenger Front (Beifahrer) in BMW; controls seat adjustments and monitors occupant status.
+SM_FA,"Seat Module - Driver Front (Fahrer) in BMW; manages driver's seat adjustments, heating, and memory settings."
+SNV,"Sensor Node Vehicle module in Hyundai; aggregates signals from various sensors related to safety, comfort, or diagnostics."
+SOBDMC_HPCM_FD1,Secondary On-Board Diagnostic & Hybrid Powertrain Control Module in Ford; handles A/C compressor control and hybrid powertrain coordination.
+SPAS,"Smart Parking Assist System module; controls and monitors automated parking maneuvers, including steering, gear selection, and throttle/brake intervention. Common in Hyundai/Kia vehicles."
+SRS,"Supplemental Restraint System module (airbag ECU); manages airbag deployment logic, crash detection, seatbelt tensioners, and impact sensors."
+STW,"Steering Wheel module; sends signals from steering angle sensors and switch actions (e.g., buttons, paddles) and may interact with steer-by-wire systems."
+SWA,"Steering Angle Sensor module; provides precise steering wheel angle and rate data to stability control, ADAS, and power steering systems."
+SWRC,"Steering Wheel Remote Control module; handles input from steering wheel buttons for infotainment, phone, cruise control, etc."
+SZL,"Steering Column Switch Cluster (German: Sensor-Zentraleinheit-Lenkstock); integrates turn signal, wiper, and cruise control stalks, often includes steering angle sensing. Common in BMW and Mercedes platforms."
+T18_BatteryCharger,Likely a charger ECU in GM electric vehicles reporting AC charging stats.
+TCCM,Transfer Case Control Module; handles AWD or 4WD torque distribution (Ford).
+TCM,Transmission Control Module (Volvo V40) controlling gear shifting logic.
+TCM_DSL,Diesel variant of TCM using AUTOSAR Network Management (Ford).
+TCU,"Telematics Control Unit (Hyundai); manages eCall, remote access, and telematics data."
+TMU,Another Telematics Management Unit variant used on a different Hyundai CAN bus.
+TSTR,Tester Functional Request – typically a diagnostic broadcast message used during service.
+TestTool,"External diagnostic or calibration tool issuing UDS, XCP, or OEM-specific requests; used for testing, flashing, or real-time data acquisition during development or service."
+TestTool_FO,Variant of a diagnostic or development test tool ; used for issuing UDS requests or simulations during  vehicle development or testing.
+VDA,"Vehicle Display Assembly, responsible for sending messages related to the instrument cluster (speed, RPM, indicators, etc.) => ECU related to Cluster (dashboard) messages"
+VDM,"Vehicle Dynamics Module in Rivian vehicles; manages dynamic vehicle behavior such as steering, drive mode status, and actuator coordination. Also handles diagnostic and calibration communication like XCP."
+VEH,"General body or vehicle domain controller in Tesla Model 3; responsible for body-related signals such as stalk input, door status, and switch states. Often aggregates sensor and switch data for other systems."
+VGSG,Virtual Gear Selector Gearbox – torque conversion status in BMWs (E9X/E8X).
+VIS2_FO,CCP (Calibration Protocol) data for Cadillac's Forward Object module (for live tuning or diagnostics).
+VIS_FO,Diagnostic Trouble Code (DTC) triggered message for Forward Object detection module (Cadillac).
+VSA,Vehicle Stability Assist; often refers to brake or traction modules (Acura RDX).
+VSW,"Vehicle Switch control, responsible for managing status/control of in-cabin switches like lights, hazards, or infotainment toggles."
+Vector__XXX,Placeholder or undefined sender used in DBC files where the true ECU sender is unknown or not labeled. Often appears in reverse-engineered or incomplete DBCs.
+Waehlhebel_MQB,Gear selector module in VW MQB platforms; transmits gear lever position and switching behavior. Typically interfaces with transmission control and drive mode logic.
+XXX,Placeholder or undefined sender used in DBC files where the true ECU sender is unknown or not labeled. Often appears in reverse-engineered or incomplete DBCs.
+ZBE,"Zentrale Bedien Einheit – German for ""central control unit"", related to iDrive control (BMW)."
+ZR_High,Possibly high-speed infotainment or main control unit (VW MEB platform).
+_4WD,4WD control logic for Hyundai 2015 CAN system.
+_DOFIMU1_FO / _DOFIMU2_FO,DTC triggered messages from DOF IMUs (Inertial Measurement Units) – likely fault responses in Cadillac CT6.
+iBAU,"Integrated Brake Actuation Unit – controls brake actuation logic, common in Hyundai/Kia."
+status_node,Lighting status from BYD’s Tang PHEV – possibly a central lighting control broadcast.
