@@ -298,12 +298,11 @@ print("Init CAN1 OK!")
 #	设置通道1  滤波:只接收 扩展帧,ID范围 5~6
 ###################################################################
 
-## i think ch2 of device 1 (dev_ch2) is only intiated for listening, so it can start later??
+## dev_ch1 (Channel 0) set as listener => Set filter for Receiver
 canDLL.ZCAN_ClearFilter(dev_ch2)
 canDLL.ZCAN_SetFilterMode(dev_ch2,0)
 # canDLL.ZCAN_SetFilterStartID(dev_ch2,5)
 # canDLL.ZCAN_SetFilterEndID(dev_ch2,6)
-
 canDLL.ZCAN_AckFilter(dev_ch2)
 
 #启动通道1
@@ -477,21 +476,20 @@ def send_msg1():
     # print("\r\n CAN0 Transmit CAN msg: %d." % can_msgs[0].frame.data[0])
     return ret
 
-ret = send_msg1();
 
 #通道2接收数据
 #Receive Messages
 # ret = canDLL.ZCAN_GetReceiveNum(dev_ch2, TYPE_CAN)
-# print(ret)
-print("Receiving...")
-print("ret: %s" % ret)
+
+
 # def receive_msg1(ret):
 # rcv_can_msgs = (ZCAN_Receive_Data * 10)()
 # print(''.join(str(rcv_can_msgs[0].frame.data[j]) + ' ' for j in range(rcv_can_msgs[0].frame.can_dlc)))
 
 def receive_msg():
     ret = canDLL.ZCAN_GetReceiveNum(dev_ch2, TYPE_CAN)
-
+    print("Receiving...")
+    print("ret: %s" % ret)
     counter = 0
     while ret <= 0:#如果没有接收到数据，一直循环查询接收。
             ret = canDLL.ZCAN_GetReceiveNum(dev_ch2, TYPE_CAN)
@@ -552,7 +550,17 @@ def receive_msg_flowcontrol():
                             ''.join(f'{rcv_can_msgs[i].frame.data[j]:02x} ' for j in range(rcv_can_msgs[i].frame.can_dlc))))
 
 time.sleep(1) # give time for transmission
-receive_msg_flowcontrol()
+
+
+# Run 
+ret = send_msg1() # Sends message 1, returns number of frames sent (checked by receive_msg)
+fc = canDLL.ZCAN_Transmit(dev_ch1, flow_msg, 1) # Sends Flow Control 
+print("\r\nTransmitting Flow control Message...\n: %d." % fc)
+time.sleep(0.5)
+print("Pause. . .")
+
+
+receive_msg()
 
 
 ### multithreading setup ###
